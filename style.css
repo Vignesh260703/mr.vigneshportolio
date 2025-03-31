@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://img.freepik.com/free-vector/luxury-blue-golden-background_23-2149329427.jpg?t=st=1743345064~exp=1743348664~hmac=a9807defcabbeb56857cb73d581fc9aa9e8f0bd8146167e7ebcc826c5640b773&w=996);
+}
+:root{
+    --primary-color: rgb(2, 9, 109);
+}
+.navbar{
+    box-shadow: 0px 0px 20px 0px var(--primary-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color:var(--primary-color);
+    background-color: white;
+}
+.nav-title h1{
+    font-size: 35px;
+    font-weight: bold;
+    
+}
+.nav-sub a{
+    font-size: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+}
+@media (max-width: 995px) {
+    .navbar{ 
+        display: none;
+    }
+}
+
+.home{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.home-content{
+    text-align: justify;
+    padding: 100px;
+    animation: homeAnimation linear both;
+    animation-timeline: view();
+}
+.home-content p{
+    margin-top: 10px;
+}
+.home img{
+    width: 400px;
+    border-radius: 100%;
+    border: solid white 3px;
+    animation: homeAnimation linear both;
+    animation-timeline: view();
+}
+.more{
+    display: none;
+    padding: 10px;
+}
+.more a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--primary-color);
+}
+@keyframes homeAnimation{
+    0%{
+        filter: blur(10px);
+    }
+    5%,55%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(10px);
+    }
+}
+
+@media (max-width: 320px) {
+    .home{ 
+        flex-direction: column-reverse;
+    }
+    .home img{
+        width: 300px;
+    }
+    .home-content{
+        padding: 10px;
+        text-align: center;
+    }
+    .more{
+        display: none;
+    }
+}
+@media (max-width: 425px) {
+    .home{ 
+        flex-direction: column-reverse;
+    }
+    .home img{
+        width: 300px;
+    }
+    .home-content{
+        padding: 10px;
+        text-align: center;
+    }
+    .more{
+        display: none;
+    }
+}
+#skills{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.skills{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.card{
+    width: 18%;
+    background-color: white;
+    border: solid var(--primary-color) 5px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: cardAnimation both;
+    animation-timeline: view(70% 5%);
+}
+.card1{
+    width: 18%;
+    background-color: white;
+    border: solid var(--primary-color) 5px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: cardAnimation both;
+    animation-timeline: view(70% 5%)  
+}
+.card img{
+    width: 200px;
+}
+.card1 img{
+    width: 200px;
+}
+
+@media (max-width:320px){
+    .card{
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .skills{
+        flex-direction: column;
+    }
+    .skills2{
+        display: none;
+    }
+    .card img{
+        width: 100px;
+    }
+    .card1{
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .card1 img{
+        width: 100px;
+    }
+}
+@media (max-width:425px){
+    .card{
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .skills{
+        flex-direction: column;
+    }
+    .skills2{
+        display: none;
+    }
+    .card img{
+        width: 100px;
+    }
+    .card1{
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .card1 img{
+        width: 100px;
+    }
+}
+@keyframes cardAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to{
+        opacity: 0.5;
+        transform: translateY(0) scale(1);
+    }
+}
